@@ -8,22 +8,23 @@ import org.testng.annotations.Test;
 
 public class LoginPage extends ScriptBase {
 
-LoginPageController loginController;
+LoginPageController loginPageController;
 
     @Test
     public void verifyWebsiteOpen(){
+        init();
+        loginPageController=new LoginPageController(driver);
 
-        loginController=new LoginPageController(driver);
 
-   init();
-   loginController.signinButton(driver);
+   loginPageController.signinButton(driver);
+   loginPageController.logIn();
 }
     @Test
     public void verifyWebsiteOpen2(){
-        loginController=new LoginPageController(driver);
+        loginPageController=new LoginPageController(driver);
         init();
 
-        loginController.signinButton(driver);
+        loginPageController.signinButton(driver);
     }
 
     @AfterTest
