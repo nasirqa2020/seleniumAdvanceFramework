@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ScriptBase {
-    public static WebDriver driver;
+    public WebDriver driver;
 
     public void init(){
 

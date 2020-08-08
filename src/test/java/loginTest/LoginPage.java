@@ -4,27 +4,27 @@ package loginTest;
 import base.ScriptBase;
 import controller.LoginPageController;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class LoginPage extends ScriptBase {
 
-LoginPageController loginPageController;
+    LoginPageController loginPageController;
+    @BeforeTest
+    public void beforeTest(){
+        init();
+    }
 
     @Test
     public void verifyWebsiteOpen(){
-        init();
         loginPageController=new LoginPageController(driver);
-
-
-   loginPageController.signinButton(driver);
-   loginPageController.logIn();
-}
-    @Test
-    public void verifyWebsiteOpen2(){
-        loginPageController=new LoginPageController(driver);
-        init();
-
         loginPageController.signinButton(driver);
+    }
+
+      @Test
+    public void verifyNewWebsiteOpen() {
+       loginPageController = new LoginPageController(driver);
+        loginPageController.logInTest();
     }
 
     @AfterTest
