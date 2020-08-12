@@ -22,7 +22,7 @@ public class LoginPage extends ScriptBase {
     }
 
       @Test
-    public void verifyNewWebsiteOpen() {
+    public void verifyNewWebsiteOpen() throws InterruptedException {
        loginPageController = new LoginPageController(driver);
         loginPageController.logInTest();
     }
