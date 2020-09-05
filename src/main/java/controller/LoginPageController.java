@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LoginPageController {
 
@@ -14,6 +15,7 @@ public class LoginPageController {
     @FindBy(name = "email") WebElement imputEmail;
     @FindBy(id = "passwd") WebElement ipmutpasswd;
     @FindBy(css = "#SubmitLogin > span") WebElement logInButton;
+    @FindBy(xpath = "//a[@title='My orders']") WebElement endPageInfo;
 
 public LoginPageController(WebDriver driver){
     PageFactory.initElements(driver,this);
@@ -33,6 +35,7 @@ public LoginPageController(WebDriver driver){
     SignInTab.click();
     Thread.sleep(1000);
     authTab.isDisplayed();
+        Assert.assertEquals(authTab,authTab);
   //  imputEmail.sendKeys("foyezali@gmail.com");
    // ipmutpasswd.sendKeys("12345xyz");
    //logInButton.click();
@@ -41,10 +44,13 @@ public LoginPageController(WebDriver driver){
     public void inPutEmailOrPasswd(WebDriver driver,String inputEmailOrPasswd,String emailOrPasswd){
     driver.findElement(By.name(""+inputEmailOrPasswd+"")).sendKeys(emailOrPasswd);
 
-
     }
     public void loginButton(){
         logInButton.click();
     }
+    public void verifyInformationdesk(WebDriver driver,String endPageInfo){
+    driver.findElement(By.xpath("//a[@title='"+endPageInfo+"']")).isDisplayed();
 
-}
+    }
+
+    }

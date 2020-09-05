@@ -31,8 +31,10 @@ public class LoginPage extends ScriptBase {
         loginPageController.loginButton();
     }
     @Test
-    public void verifyInformationDesk(){
+    public void verifyInformationMyOrderDisplayed() throws InterruptedException {
         loginPageController=new LoginPageController(driver);
+        Thread.sleep(500);
+        loginPageController.verifyInformationdesk(driver,"My orders");
 
     }
     @Test
@@ -43,6 +45,32 @@ public class LoginPage extends ScriptBase {
         loginPageController.inPutEmailOrPasswd(driver,"passwd","12345");
         loginPageController.loginButton();
     }
+
+    @Test
+    public void verifyInformationTitleSpecial(){
+        loginPageController=new LoginPageController(driver);
+       // loginPageController
+    }
+    @Test
+    public void verifyInformationMycreditslipsDisplayed() throws InterruptedException {
+        loginPageController=new LoginPageController(driver);
+        Thread.sleep(500);
+        loginPageController.verifyInformationdesk(driver,"My credit slips");
+
+    }
+    @Test
+    public void verifyInformationMyaddressesDisplayed() throws InterruptedException {
+        loginPageController=new LoginPageController(driver);
+        Thread.sleep(500);
+        loginPageController.verifyInformationdesk(driver,"My addresses");
+    }
+    @Test
+    public void verifyInformationMypersonalinfoDisplayed() throws InterruptedException {
+        loginPageController=new LoginPageController(driver);
+        Thread.sleep(500);
+        loginPageController.verifyInformationdesk(driver,"My personal info");
+    }
+
     @AfterTest
     public void afterTest(){
     driver.close();
