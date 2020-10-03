@@ -8,13 +8,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
 public class LoginPage extends ScriptBase {
 
     LoginPageController loginPageController;
-    @BeforeTest
-    public void beforeTest(){
-        init();
-    }
+
 
     @Test
     public void verifyWebsiteOpen(){
@@ -68,15 +66,15 @@ public class LoginPage extends ScriptBase {
     public void verifyInformationMypersonalinfoDisplayed() throws InterruptedException {
         loginPageController=new LoginPageController(driver);
         Thread.sleep(500);
-        loginPageController.verifyInformationdesk(driver,"My personal info");
+        loginPageController.verifyInformationdesk(driver,"Manage my personal information");
     }
 
     @AfterTest
     public void afterTest(){
-    driver.close();
+   // driver.close();
     driver.quit();
 
-        }
+     }
 
 }
 

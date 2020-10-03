@@ -36,6 +36,7 @@ public LoginPageController(WebDriver driver){
     Thread.sleep(1000);
     authTab.isDisplayed();
         Assert.assertEquals(authTab,authTab);
+//Assert.assertEquals(authTab,true    );
   //  imputEmail.sendKeys("foyezali@gmail.com");
    // ipmutpasswd.sendKeys("12345xyz");
    //logInButton.click();
