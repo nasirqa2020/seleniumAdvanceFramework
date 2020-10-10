@@ -1,59 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite preserve-order="true" name="Suite" parallel="tests" >
 <!--    <parameter name="browser" value="chrome" parallel="tests" thread-count="2"/>-->
-    <test name="login Test">
-            <parameter name="browser" value="chrome"/>
+<!--    <test name="login Test">-->
+<!--            <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+
+<!--            <class name="loginTest.LoginPage">-->
+<!--                <methods>-->
+<!--                    <include name="verifyLoginWithTestAccount"></include>-->
+<!--                    <include name="verifyInformationMyOrderDisplayed"></include>-->
+<!--                    <include name="verifyWebsiteOpen"></include>-->
+<!--                    <include name="verifyLoginWithDifferintUser"></include>-->
+<!--                    <include name="verifyInformationTitleSpecial"></include>-->
+<!--                    <include name="verifyInformationMycreditslipsDisplayed"></include>-->
+<!--                    <include name="verifyInformationMyaddressesDisplayed"></include>-->
+<!--                    <include name="verifyInformationMypersonalinfoDisplayed"></include>-->
+
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="loginTest.LoginPage">-->
+<!--                <methods>-->
+<!--                    <include name="verifyLoginWithTestAccount"></include>-->
+<!--                    <include name="verifyInformationMyOrderDisplayed"></include>-->
+<!--                    <include name="verifyWebsiteOpen"></include>-->
+<!--                    <include name="verifyLoginWithDifferintUser"></include>-->
+<!--                    <include name="verifyInformationTitleSpecial"></include>-->
+<!--                    <include name="verifyInformationMycreditslipsDisplayed"></include>-->
+<!--                    <include name="verifyInformationMyaddressesDisplayed"></include>-->
+<!--                    <include name="verifyInformationMypersonalinfoDisplayed"></include>kj-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="homePageTest.HomePage">-->
+<!--                <methods>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="homePageTest">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--           <class name="loginTest.LoginPage">-->
+<!--                <methods>-->
+<!--                  <include name="verifyLoginWithTestAccount"></include>-->
+<!--                   <include name="verifyInformationMyOrderDisplayed"></include>-->
+<!--                    <include name="verifyWebsiteOpen"></include>-->
+<!--                    <include name="verifyLoginWithDifferintUser"></include>-->
+<!--                    <include name="verifyInformationTitleSpecial"></include>-->
+<!--                    <include name="verifyInformationMycreditslipsDisplayed"></include>-->
+<!--                    <include name="verifyInformationMyaddressesDisplayed"></include>-->
+<!--                    <include name="verifyInformationMypersonalinfoDisplayed"></include>kj-->
+<!--                </methods>-->
+<!--                   </class>-->
+<!--            <class name="homePageTest.HomePage">-->
+<!--                <methods>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="search Test">
+        <parameter name="browser" value="chrome"/>
         <classes>
 
-            <class name="loginTest.LoginPage">
+            <class name="searchTest.SearchPageTest">
                 <methods>
-                    <include name="verifyLoginWithTestAccount"></include>
-                    <include name="verifyInformationMyOrderDisplayed"></include>
-                    <include name="verifyWebsiteOpen"></include>
-                    <include name="verifyLoginWithDifferintUser"></include>
-                    <include name="verifyInformationTitleSpecial"></include>
-                    <include name="verifyInformationMycreditslipsDisplayed"></include>
-                    <include name="verifyInformationMyaddressesDisplayed"></include>
-                    <include name="verifyInformationMypersonalinfoDisplayed"></include>
+                    <include name="verifySearchTopItems"></include>
 
                 </methods>
-            </class>
-            <class name="loginTest.LoginPage">
-                <methods>
-                    <include name="verifyLoginWithTestAccount"></include>
-                    <include name="verifyInformationMyOrderDisplayed"></include>
-                    <include name="verifyWebsiteOpen"></include>
-                    <include name="verifyLoginWithDifferintUser"></include>
-                    <include name="verifyInformationTitleSpecial"></include>
-                    <include name="verifyInformationMycreditslipsDisplayed"></include>
-                    <include name="verifyInformationMyaddressesDisplayed"></include>
-                    <include name="verifyInformationMypersonalinfoDisplayed"></include>kj
-                </methods>
-            </class>
-            <class name="homePageTest.HomePage">
-                <methods>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="homePageTest">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-           <class name="loginTest.LoginPage">
-                <methods>
-                  <include name="verifyLoginWithTestAccount"></include>
-                   <include name="verifyInformationMyOrderDisplayed"></include>
-                    <include name="verifyWebsiteOpen"></include>
-                    <include name="verifyLoginWithDifferintUser"></include>
-                    <include name="verifyInformationTitleSpecial"></include>
-                    <include name="verifyInformationMycreditslipsDisplayed"></include>
-                    <include name="verifyInformationMyaddressesDisplayed"></include>
-                    <include name="verifyInformationMypersonalinfoDisplayed"></include>kj
-                </methods>
-                   </class>
-            <class name="homePageTest.HomePage">
-                <methods>
-                </methods>
+
             </class>
         </classes>
     </test>
