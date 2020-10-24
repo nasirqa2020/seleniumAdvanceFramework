@@ -2,10 +2,14 @@ package base;
 
 
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -26,10 +30,18 @@ public class ScriptBase {
             System.out.println("test with firefox browser"+Thread.currentThread().getId());
 
 
+        }else if(browser.equalsIgnoreCase("safari")){
+            System.setProperty("webdriver.safari.noinstall","true");
+            driver=new SafariDriver();
+            System.out.println("test with safari: "+Thread.currentThread().getId());
+        }
+       else if(browser.equalsIgnoreCase("opera")){
+            DesiredCapabilities capabilities =new DesiredCapabilities();
+            System.setProperty("webdriver.opera.driver","./drivers/chromedriver");
+            driver=new OperaDriver(capabilities);
+
         }
 
-
-      ;
         driver.get("http://automationpractice.com/index.php");
 
 }

@@ -16,11 +16,11 @@ public class SearchController {
         PageFactory.initElements(driver,this);
 
     }
-   public void searchItems() throws InterruptedException {
+   public void searchItems(String searchProduct) throws InterruptedException {
         Thread.sleep(500);
       searchTab.clear();
-      searchTab.sendKeys("top");
+      searchTab.sendKeys(searchProduct);
       searchSubmit.click();
-       Assert.assertEquals(searchTopResult,searchTopResult);
+     //  Assert.assertEquals(searchTopResult,searchTopResult);
    }
 }

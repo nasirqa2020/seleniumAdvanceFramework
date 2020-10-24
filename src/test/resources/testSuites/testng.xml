@@ -63,12 +63,24 @@
 
             <class name="searchTest.SearchPageTest">
                 <methods>
-                    <include name="verifySearchTopItems"></include>
+<!--                    <include name="verifySearchTopItems"></include>-->
 
                 </methods>
 
             </class>
         </classes>
     </test>
+<!--    <test name="enterTest">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
 
+<!--            <class name="enterOrderTest.addCaerPage">-->
+<!--                <methods>-->
+<!--&lt;!&ndash;                    <include name="verifyOrderTestwithSummery"></include>&ndash;&gt;-->
+
+<!--                </methods>-->
+
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
